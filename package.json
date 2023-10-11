@@ -8,9 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "server": "cd API/frezzzcoServer && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run start\""
   },
-  "private": true,
+  "private": true,  
   "dependencies": {
     "@agm/core": "1.1.0",
     "@angular/animations": "^14.2.0",

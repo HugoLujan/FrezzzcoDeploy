@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './components/components.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
-import { BarberosComponent } from './barberos/barberos.component';
-import { ProductosComponent } from './productos/productos.component';
+import { NosotrosComponent } from './home/pages/nosotros/nosotros.component';
+import { BarberosComponent } from './home/pages/barberos/barberos.component';
+import { ProductosComponent } from './shop/pages/productos/productos.component';
 import { BasicelementsComponent } from './components/basicelements/basicelements.component';
-import { DetailsproductComponent } from './detailsproduct/detailsproduct.component';
-import { CarritoComponent } from './carrito/carrito.component';
-import { FormProductComponent } from './form-product/form-product.component';
+import { DetailsproductComponent } from './shop/pages/detailsproduct/detailsproduct.component';
+import { CarritoComponent } from './shop/pages/carrito/carrito.component';
+import { FormProductComponent } from './shop/pages/form-product/form-product.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },

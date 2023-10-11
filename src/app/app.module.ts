@@ -11,14 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
+import { NosotrosComponent } from './home/pages/nosotros/nosotros.component';
 import { FooterComponent } from './footer/footer.component';
-import { BarberosComponent } from './barberos/barberos.component';
-import { ProductosComponent } from './productos/productos.component';
-import { CarritoComponent } from './carrito/carrito.component';
-import { DetailsproductComponent } from './detailsproduct/detailsproduct.component';
-import { FormProductComponent } from './form-product/form-product.component';
-import { DoneComponent } from './done/done.component';
+import { BarberosComponent } from './home/pages/barberos/barberos.component';
+import { ProductosComponent } from './shop/pages/productos/productos.component';
+import { CarritoComponent } from './shop/pages/carrito/carrito.component';
+import { DetailsproductComponent } from './shop/pages/detailsproduct/detailsproduct.component';
+import { FormProductComponent } from './shop/pages/form-product/form-product.component';
+import { DoneComponent } from './shop/pages/done/done.component';
 
 
 
@@ -44,7 +44,8 @@ import { DoneComponent } from './done/done.component';
         AppRoutingModule,
         ComponentsModule,
         ExamplesModule,
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,0 +1,242 @@
+.poppins {
+  font-family: 'PoppinsSemiBold', sans-serif;
+}
+
+.akira {
+  font-family: 'AkiraExpandedDemo', sans-serif;
+}
+
+.fondo-negro {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: white;
+}
+
+.sizedBox {
+  height: 100px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -5px; /* Añade un margen negativo para compensar el margen en los elementos internos */
+}
+
+.image-wrapper {
+  position: relative;
+  margin: 0;
+  width: calc(33.33% - 10px); /* Divide el contenedor en tres columnas, restando el margen */
+  max-width: 300px;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.small-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+.fondo-negro2 {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.sizedBox {
+  height: 100px;
+}
+
+.sizedBox2 {
+  height: 50px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los contenedores se envuelvan en pantallas pequeñas */
+  justify-content: space-between;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-right: 5px;
+  width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  max-width: 350px; /* Limita el ancho máximo de las imágenes */
+  margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.small-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column; /* Apila los contenedores en pantallas pequeñas */
+  }
+
+  .image-wrapper {
+    margin-right: 0;
+  }
+}
+
+/* Estilo para la imagen con borde blanco y esquinas puntiagudas */
+.image-with-border {
+  border: 4px solid white; /* Grosor y color del borde blanco */
+  border-radius: 20px; /* Radio de las esquinas puntiagudas */
+  overflow: hidden; /* Recorta cualquier contenido que se desborde del contenedor */
+  max-width: 90%;
+  min-height: 80%;
+}
+
+/* Estilo para la imagen dentro del contenedor */
+.image-with-border img {
+  max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  display: block; /* Elimina espacios adicionales debajo de la imagen */
+}
+
+/* Estilos personalizados para el carrusel */
+.ngb-carousel {
+  border: 4px solid white; // Borde blanco con grosor de 4px
+  border-radius: 20px; // Esquinas redondas
+  overflow: hidden; // Recorta cualquier contenido que se desborde del carrusel
+}
+
+/* Estilos para las imágenes del carrusel */
+.ngb-slide img {
+  max-width: 100%; // Ajusta las imágenes al ancho del carrusel
+  border-radius: 20px; // Esquinas redondas para las imágenes
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between; // Espacio entre las imágenes
+}
+
+.image-container2 {
+  flex: 1; // Cada imagen ocupa una parte igual del espacio disponible
+  border-radius: 20px; // Esquinas redondas
+  overflow: hidden; // Recorta cualquier contenido que se desborde
+  margin-right: 10px; // Espacio entre las imágenes (puedes ajustar según sea necesario)
+  border: 2px solid white;
+
+}
+
+.image-container2:last-child {
+  margin-right: 0; // No aplicar margen a la última imagen
+}
+
+.image-container2 img {
+  max-width: 100%; // Ajustar la imagen al ancho del contenedor
+  display: block; // Eliminar espacios adicionales debajo de la imagen
+  border-radius: 20px; // Esquinas redondas para la imagen (se repite por si acaso)
+  width: 100%; // Hace que todas las imágenes tengan el mismo ancho
+  height: 100%;
+}
+
+.button-agenda {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 8px 21px;
+  font-size: 12px;
+  font-family: AkiraExpandedDemo, sans-serif;
+  border: 2px solid black;
+}
+
+.button-agenda:hover{
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center; // Centra verticalmente
+}
+
+.center-button {
+  text-align: center; // Centra el contenido horizontalmente dentro de este div
+}
+
+.font-black{
+  color: black;
+}

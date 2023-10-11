@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="page-header page-header-small" filter-color="black">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/grupales/DSC09702.jpg') ;">
+      
+  </div>
+    <div class="container">
+        <div class="content-center">
+            <img src="assets/img/logos/micrologo.png" alt="Logo" style="position: absolute; top: 50px; left: 50px; width: 100px; height: 100px;">
+        </div>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab-button" (click)="showTab('Playera')" [class.active]="selectedTab === 'Playera'">Playeras</button>
+    <button class="tab-button" (click)="showTab('Cabello')" [class.active]="selectedTab === 'Cabello'">Cabello</button>
+    <button class="tab-button" (click)="showTab('Barba')" [class.active]="selectedTab === 'Barba'">Barba</button>
+  </div>
+    
+    <div id="Playera" class="tab-content" [class.active]="selectedTab === 'Playera'">
+      <!-- Contenido de la pestaña de Playeras -->
+      <div class="producto" *ngFor="let product of products">
+        <a [routerLink]="['/detailsproduct', product._id]">
+          <div class="imagen-con-borde">
+            <img src="{{ product.image }}" alt="{{ product.title }}">
+          </div>
+          <div class="descripcion">
+            <h3>{{ product.title }}</h3>
+            <h4>${{ product.price }} MXN <i class="fas fa-shopping-cart cart-icon" style="color: black;"></i></h4>
+          </div>
+        </a>
+      </div>            
+    </div>
+    
+    
+    <div id="Cabello" class="tab-content" [class.active]="selectedTab === 'Cabello'">
+      <!-- Contenido de la pestaña de Cabello -->
+      <div class="producto" *ngFor="let product of products">
+        <a [routerLink]="['/detailsproduct', product._id]">
+          <div class="imagen-con-borde">
+            <img src="{{ product.image }}" alt="{{ product.title }}">
+          </div>
+          <div class="descripcion">
+            <h3>{{ product.title }}</h3>
+            <h4>${{ product.price }} MXN <i class="fas fa-shopping-cart cart-icon" style="color: black;"></i></h4>
+          </div>
+        </a>
+      </div>
+    </div>          
+    
+    <div id="Barba" class="tab-content" [class.active]="selectedTab === 'Barba'">
+      <!-- Contenido de la pestaña de Barba -->
+      <div class="producto" *ngFor="let product of products">
+        <a [routerLink]="['/detailsproduct', product._id]">
+          <div class="imagen-con-borde">
+            <img src="{{ product.image }}" alt="{{ product.title }}">
+          </div>
+          <div class="descripcion">
+            <h3>{{ product.title }}</h3>
+            <h4>${{ product.price }} MXN <i class="fas fa-shopping-cart cart-icon" style="color: black;"></i></h4>
+          </div>
+        </a>
+      </div>
+    </div>
+</div>
+

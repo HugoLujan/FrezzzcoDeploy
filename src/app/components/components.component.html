@@ -1,0 +1,146 @@
+<div class="wrapper">
+  <div class="page-header page-header-small" filter-color="black">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/cortes/DSC05112.jpg'); background-size: cover; background-position: top;"></div>    
+    <div class="container">
+      <div class="content-center brand" style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 50vh; text-align: center;">
+        <h3 class="header-text">Mantente</h3>
+        <button class="dropbtn" (click)="toggleContent()">FREZZZCO</button>
+      </div>
+    </div>  
+  </div>
+    <div>
+      <div *ngIf="contentVisible">
+        <app-basicelements></app-basicelements>
+      </div>
+      <div class="main" style="width: 1px; height: 1px;" #mainSection></div>
+      <div class="section" id="carousel">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10"> <!-- Aumentamos el ancho del contenedor -->
+                    <ngb-carousel>
+                        <ng-template ngbSlide>
+                            <img class="d-block w-100" src="assets/img/cortes/DSC02309.jpg" alt="First slide">
+                            <div class="carousel-caption d-md-block">
+                                <div class="dropdown">
+                                  <a href="/barberos"><button class="dropbtn">Conocenos</button></a>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class="d-block w-100" src="assets/img/cortes/DSC04205.jpg" alt="Second slide">
+                            <div class="carousel-caption d-md-block">
+                                <div class="dropdown">
+                                    <a href="/barberos"><button class="dropbtn">Conócenos</button></a>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class="d-block w-100" src="assets/img/cortes/DSC05089.jpg" alt="Third slide">
+                            <div class="carousel-caption d-md-block">
+                                
+                                    <div class="dropdown">
+                                      <a href="/barberos"><button class="dropbtn">Conocenos</button></a>
+                                    </div>
+                                
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        <style>
+
+          .header-text {
+            font-family: 'AkiraExpandedDemo', sans-serif;
+            font-size: 16px;
+            margin: 0; 
+          }
+  
+          .button-rectangle {
+              display: inline-block;
+              overflow: hidden;
+              border-radius: 0; /* Elimina las esquinas redondeadas */
+          }
+  
+          .rectangle-button {
+              display: block;
+              width: 150px; /* Ajusta el ancho según tus necesidades */
+              padding: 10px 20px; /* Ajusta el espaciado interno según tus necesidades */
+              background-color: #3498db; /* Color de fondo del botón */
+              color: white; /* Color del texto del botón */
+              border: none;
+              text-align: center;
+              text-decoration: none;
+              font-size: 16px;
+              line-height: 1.5;
+          }
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+          }
+  
+          .dropbtn {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 0%;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 8px 21px;
+            font-size: 16px;
+            font-family: AkiraExpandedDemo, sans-serif;
+          }
+
+          .dropbtn:hover {
+            background-color: black;
+            color: white;
+          }
+        
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 5px;
+          }
+        
+          .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.2s;
+          }
+        
+          .dropdown-content a:hover {
+            background-color: #f5f5f5;
+          }
+        
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+
+          .dropdown button.dropbtn {
+            font-size: 11px;
+            background-color: #000;
+            color: #fff; 
+            border-radius: 15px; 
+            border: 2px solid #fff; 
+          }
+
+          .dropdown button.dropbtn:hover {
+            background-color: #fff;
+            color: #000; 
+            border: 2px solid #000; 
+          }
+
+        </style>     
+  </div>
+  

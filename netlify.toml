@@ -1,0 +1,15 @@
+# netlify.toml
+
+[build]
+  # Indica el comando de construcción
+  command = "npm install --legacy-peer-deps && npm run build"
+  
+  # Configura las versiones de Node.js y npm
+  # Esto es opcional, pero puede ser útil para especificar las versiones correctas
+  node_version = "14"
+  
+  # Configura las variables de entorno si es necesario
+  # [context.production.environment]
+  #   NODE_ENV = "production"
+  
+  # También puedes configurar otras opciones según tus necesidades

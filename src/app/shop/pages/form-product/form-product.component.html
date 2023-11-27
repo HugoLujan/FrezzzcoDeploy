@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="page-header page-header-small fondo-negro">
+        <h1 class="akira" style="text-align: center;">NUEVO PRODUCTO</h1>
+      </div>
+
+
+    
+    <div class="sizedBox"></div>
+    <div class="container">
+        <form class="formulario" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required formControlName="title">
+
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required formControlName="description"></textarea>
+
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" required formControlName="price">
+
+            <label for="type">Tipo:</label>
+            <select id="type" name="type" required formControlName="type">
+                <option value="Playera">Playera</option>
+                <option value="Cabello">Cabello</option>
+                <option value="Barba">Barba</option>
+            </select>
+
+            <label for="image">Imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*" (change)="onImageSelected($event)">
+            <div class="sizedBox2"></div>
+
+            <label for="status">Disponible:</label>
+            <input type="checkbox" id="status" name="status" required formControlName="status">
+
+            <div class="button-container">
+                <button type="submit">Crear</button>
+            </div>
+        </form>
+    </div>
+    <div class="sizedBox"></div>
+</div>

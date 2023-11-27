@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <div class="page-header page-header-small" filter-color="black">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/productos/playeras/DSC09740.jpg') ;"></div>
+      <div class="container">
+          <div class="content-center">
+              <h1 class="title" style="font-family: 'AkiraExpandedDemo', sans-serif;">{{ product.title }}</h1>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="">
+          <a href="#button" class="btn btn-primary btn-round  btn-lg" data-background-color="black">Follow</a>
+          <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+      </div>
+  </div> 
+
+  <div class="container ">
+      <div class="row mx-auto" style="font-family: 'PoppinsSemiBold', sans-serif;">
+        <div class="col-md-6">
+          <div class="image-with-border">
+            <div class="square-image-wrapper">
+              <img src="{{ product.image }}" alt="{{ product.title }}">
+            </div>
+          </div>
+      </div>
+
+      <div class="col-md-6 justify-content-center">
+          <div class="title text-center">
+            <h4 style="text-align: left; margin-bottom: 5px;">VÍSTETE FREZZZCO</h4>
+            <h1 style="text-align: left; font-weight: bold; border-top: 3px solid black; padding-top: 5px; margin-bottom: 5px;">{{ product.title }}</h1>
+            <div class="half">
+            <p style="text-align: left; font-size: 150%">{{ product.description }}</p>
+            <h2 style="font-size: 250%;">${{ product.price }}MXN</h2>
+          </div>
+          <!-- Botones -->
+          <div class="" style="text-align: left;">
+              <button class="size-button">S</button>
+              <button class="size-button">M</button>
+              <button class="size-button">L</button>
+          </div>
+
+          <div style="text-align: left; margin-top: 20px;">
+              <label for="cantidad" style="font-size: 18px;">Cantidad:</label>
+              <select id="cantidad" name="cantidad" style="color: black; font-size: 18px; padding: 10px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+        </div>
+        <div class="sizedBox2"></div>
+
+        
+        <div class="button-container">
+          <button class="button-agenda">Agregar al carrito</button>
+          <a href="/carrito"><button class="button-agenda2">Comprar</button></a>
+        </div>
+
+
+        <div class="sizedBox2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sizedBox2"></div>
+</div>

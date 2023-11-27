@@ -1,0 +1,293 @@
+.barber-info {
+  display: flex;
+  align-items: center;
+}
+
+.barber-avatar {
+  max-width: 50px; /* Tamaño máximo del ancho */
+  max-height: 50px; /* Tamaño máximo del alto */
+  margin-right: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+.barber-name {
+  flex-grow: 1; /* Permite que el nombre ocupe todo el espacio restante */
+  text-align: right; /* Alinea el nombre a la derecha */
+}
+.calendar-list {
+  display: flex;
+  height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+  margin-left: 230px;
+}
+
+/* Estilos para dispositivos de pantalla más pequeña (hasta 768px) */
+@media (max-width: 768px) {
+  .calendar-list {
+    flex-direction: column; /* Cambia a diseño de columna en versiones móviles */
+  }
+}
+
+
+.combined-container {
+  display: flex;
+  flex-direction: column; /* Cambia a diseño de columna en versiones móviles */
+  align-items: center; /* Centra los elementos verticalmente en móviles */
+  margin-top: 10px; /* Añade espacio entre el contenedor combinado y otros elementos */
+}
+
+.datepicker-container {
+  flex: 1;
+  margin-right: 0; /* Elimina el margen entre el datepicker y los slots en móviles */
+  margin-bottom: 10px; /* Añade espacio entre el datepicker y los slots en versiones móviles */
+}
+
+/* Estilos para dispositivos de pantalla más pequeña (hasta 768px) */
+@media (max-width: 768px) {
+
+
+
+  .datepicker-container {
+    margin-right: 0; /* Elimina el margen entre el datepicker y los slots en móviles */
+    margin-bottom: 10px; /* Añade espacio entre el datepicker y los slots en móviles */
+  }
+
+  .section-basic {
+    padding: 20px; /* Ajusta el relleno según tus necesidades */
+  }
+
+  .producto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-md-10 {
+    width: 100%; /* Ocupar todo el ancho disponible */
+  }
+
+  .nav-tabs-navigation {
+    display: flex; /* Hace que los tabs estén alineados horizontalmente */
+    justify-content: center; /* Centra los tabs horizontalmente */
+    align-items: center; /* Centra los tabs verticalmente */
+  }
+
+  .nav-tabs-wrapper {
+    flex-direction: row; /* Hace que los tabs se alineen horizontalmente */
+  }
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 25%;
+  align-items: center; // Centrar verticalmente
+  justify-content: center; // Centrar horizontalmente
+  margin: auto; // Centrar en el contenedor
+  margin-bottom: 30px;
+}
+
+.barber-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 25%;
+  align-items: center; // Centrar verticalmente
+  justify-content: center; // Centrar horizontalmente
+  margin: auto; // Centrar en el contenedor
+  margin-bottom: 30px;
+}
+
+
+.mi-div {
+  height: 100px; // Alto de 200 píxeles
+}
+
+.poppins {
+  font-family: 'PoppinsSemiBold', sans-serif;
+}
+
+.akira {
+  font-family: 'AkiraExpandedDemo', sans-serif;
+}
+
+.hanson {
+  font-family: 'Hanson', sans-serif;;
+}
+
+.button-black {
+  padding: 5px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+
+
+.button-rectangle {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 0;
+  /* Elimina las esquinas redondeadas */
+}
+
+.rectangle-button {
+  display: block;
+  width: 150px;
+  /* Ajusta el ancho según tus necesidades */
+  padding: 10px 20px;
+  /* Ajusta el espaciado interno según tus necesidades */
+  background-color: #3498db;
+  /* Color de fondo del botón */
+  color: white;
+  /* Color del texto del botón */
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+.dropbtn2 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 8px 21px;
+  font-size: 16px;
+  font-family: PoppinsSemiBold, sans-serif;
+}
+
+.dropbtn2:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+
+.dropbtn {
+  background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 8px 0; /* Elimina el espaciado en los lados izquierdo y derecho */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    font-size: 16px;
+    font-family: PoppinsSemiBold, sans-serif;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown button.dropbtn {
+  font-size: 11px;
+  background-color: #000;
+  color: #fff;
+
+  border: 2px solid #fff;
+}
+
+.dropdown button.dropbtn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.title.with-border2 {
+  text-align: right;
+}
+
+.title.with-border3 {
+  text-align: center;
+}
+
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.col {
+  padding: 0;
+}
+
+.ngb-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ngb-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+}
+
+/* Estilo para los campos de entrada enfocados */
+.input-group-focus input {
+  color: white; /* Cambia el color del texto a blanco cuando el campo está enfocado */
+}
+
+/* Estilo para los campos de entrada no enfocados */
+.input-group:not(.input-group-focus) input {
+  color: black; /* Cambia el color del texto a negro cuando el campo no está enfocado */
+}
+
+.custom-input {
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+.form-control {
+  color: white; /* Cambia el color del texto a blanco */
+  border-color: #000000; /* Cambia el color del borde a rojo (#ff0000) */
+  border-width: 2px; /* Establece un ancho de borde de 2 píxeles */
+}
+
+.modal-body form {
+  margin-top: 0; /* Establece el margen superior del formulario a 0 */
+}
+
+.modal-body .form-group {
+  margin-top: 10px; /* Ajusta el margen superior de los elementos del formulario según tus necesidades */
+}

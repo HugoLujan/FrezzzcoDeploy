@@ -1,0 +1,410 @@
+.poppins {
+  font-family: 'PoppinsSemiBold', sans-serif;
+  font-family: 'Poppins-Extrabold', sans-serif;
+}
+
+.akira {
+  font-family: 'AkiraExpandedDemo', sans-serif;
+}
+
+.fondo-negro {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: white;
+}
+
+.sizedBox {
+  height: 100px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -5px; /* Añade un margen negativo para compensar el margen en los elementos internos */
+}
+
+.image-wrapper {
+  position: relative;
+  margin: 0;
+  width: calc(33.33% - 10px); /* Divide el contenedor en tres columnas, restando el margen */
+  max-width: 300px;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.small-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+.fondo-negro2 {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.sizedBox {
+  height: 100px;
+}
+
+.sizedBox2 {
+  height: 50px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los contenedores se envuelvan en pantallas pequeñas */
+  justify-content: space-between;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-right: 5px;
+  width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  max-width: 350px; /* Limita el ancho máximo de las imágenes */
+  margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.small-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+}
+
+
+/* Estilo para el contenedor de la imagen cuadrada */
+.square-image-wrapper {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  padding-top: 100%; /* Esto establece la relación de aspecto 1:1 (cuadrada) */
+  position: relative; /* Para poder colocar la imagen absolutamente dentro de este contenedor */
+  overflow: hidden; /* Recorta la imagen que desborda el contenedor */
+}
+
+/* Estilo para la imagen dentro del contenedor cuadrado */
+.square-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen para que llene el contenedor */
+  border-radius: 15px; /* Si deseas mantener el borde redondeado */
+}
+
+
+
+
+
+
+.image-row {
+  display: flex;
+  justify-content: space-between; // Espacio entre las imágenes
+}
+
+.image-container2 {
+  flex: 1; // Cada imagen ocupa una parte igual del espacio disponible
+  border-radius: 20px; // Esquinas redondas
+  overflow: hidden; // Recorta cualquier contenido que se desborde
+  margin-right: 10px; // Espacio entre las imágenes (puedes ajustar según sea necesario)
+  border: 2px solid white;
+
+}
+
+.image-container2:last-child {
+  margin-right: 0; // No aplicar margen a la última imagen
+}
+
+.image-container2 img {
+  max-width: 100%; // Ajustar la imagen al ancho del contenedor
+  display: block; // Eliminar espacios adicionales debajo de la imagen
+  border-radius: 20px; // Esquinas redondas para la imagen (se repite por si acaso)
+  width: 100%; // Hace que todas las imágenes tengan el mismo ancho
+  height: 100%;
+}
+
+// .button-agenda {
+//   background-color: white;
+//   color: black;
+//   border: none;
+//   border-radius: 15px;
+//   cursor: pointer;
+//   transition: background-color 0.3s, color 0.3s;
+//   padding: 8px 150px; 
+//   font-size: 12px;
+//   font-family: AkiraExpandedDemo, sans-serif;
+//   border: 2px solid black;
+
+//   &:hover {
+//     background-color: black;
+//     color: white;
+//   }
+// }
+
+// .button-agenda2 {
+//   background-color: rgb(0, 0, 0);
+//   color: rgb(255, 255, 255);
+//   border: none;
+//   border-radius: 15px;
+//   cursor: pointer;
+//   transition: background-color 0.3s, color 0.3s;
+//   padding: 8px 198px; 
+//   font-size: 12px;
+//   font-family: AkiraExpandedDemo, sans-serif;
+//   border: 2px solid rgb(255, 255, 255);
+
+//   &:hover {
+//     background-color: white;
+//     color: black;
+//     border: none;
+//     border-radius: 15px;
+//     cursor: pointer;
+//     transition: background-color 0.3s, color 0.3s;
+//     font-size: 12px;
+//     font-family: AkiraExpandedDemo, sans-serif;
+//     border: 2px solid black;
+//   }
+// }
+
+/* Estilo para el contenedor de los botones */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Apila los botones uno encima del otro */
+  align-items: stretch; /* Estira los botones para ocupar todo el ancho horizontal */
+  width: 100%; /* Ocupa todo el ancho horizontal del contenedor padre */
+  max-width: 100%; /* Establece el ancho máximo igual al ancho de la página */
+}
+
+/* Estilo para los botones */
+.button-agenda {
+  flex: 1; /* Hace que los botones se expandan para ocupar el mismo espacio vertical */
+  width: 100%; /* Ocupa todo el ancho horizontal disponible */
+  padding: 8px 0; /* Ajusta el padding vertical de los botones */
+  font-size: 12px;
+  font-family: AkiraExpandedDemo, sans-serif;
+  border: 2px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  text-decoration: none; /* Evita que los botones subrayen enlaces */
+  margin-bottom: 10px; /* Espacio entre los botones */
+  background-color: white;
+}
+
+/* Estilo para los botones en estado de hover */
+.button-agenda:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Estilo para los botones */
+.button-agenda2 {
+  flex: 1; /* Hace que los botones se expandan para ocupar el mismo espacio vertical */
+  width: 100%; /* Ocupa todo el ancho horizontal disponible */
+  padding: 8px 0; /* Ajusta el padding vertical de los botones */
+  font-size: 12px;
+  font-family: AkiraExpandedDemo, sans-serif;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  text-decoration: none; /* Evita que los botones subrayen enlaces */
+  margin-bottom: 10px; /* Espacio entre los botones */
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* Estilo para los botones en estado de hover */
+.button-agenda2:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+
+
+/* Estilos para pantallas grandes (mayor de 768px) */
+.col-md-6 .title {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.col-md-6 .title h4 {
+  font-size: 24px; /* Tamaño de fuente para pantallas grandes */
+}
+
+.col-md-6 .title h1 {
+  text-align: left;
+  font-weight: bold;
+  border-top: 3px solid black;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  font-size: 36px; /* Tamaño de fuente para pantallas grandes */
+}
+
+.col-md-6 .half {
+  text-align: left;
+}
+
+.col-md-6 .half p {
+  font-size: 20px; /* Tamaño de fuente para pantallas grandes */
+}
+
+.col-md-6 .half h2 {
+  font-size: 48px; /* Tamaño de fuente para pantallas grandes */
+}
+
+/* Media query para pantallas más pequeñas (menos de 768px, como dispositivos móviles) */
+@media (max-width: 768px) {
+  .col-md-6 .title h4 {
+    font-size: 18px; /* Ajusta el tamaño de fuente para dispositivos móviles */
+  }
+
+  .col-md-6 .title h1 {
+    font-size: 28px; /* Ajusta el tamaño de fuente para dispositivos móviles */
+  }
+
+  .col-md-6 .half p {
+    font-size: 16px; /* Ajusta el tamaño de fuente para dispositivos móviles */
+  }
+
+  .col-md-6 .half h2 {
+    font-size: 36px; /* Ajusta el tamaño de fuente para dispositivos móviles */
+  }
+}
+
+
+
+
+
+
+
+.contenedor {
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center; // Centra verticalmente
+}
+
+
+
+.font-black{
+  color: black;
+}
+
+
+.col-md-6 .title .half {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.col-md-6 .title .half p {
+  font-size: smaller;
+  margin: 0;
+}
+
+.size-button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.size-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.size-button.selected {
+  background-color: black;
+  color: white;
+}
+
+
+
+#cantidad {
+  padding: 8px; /* Aumenta el espacio alrededor del menú desplegable */
+  font-size: 16px; /* Aumenta el tamaño de fuente */
+}
+
+#cantidad:hover {
+  color: black;
+}
+

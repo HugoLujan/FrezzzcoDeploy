@@ -1,0 +1,62 @@
+.poppins {
+    font-family: 'PoppinsSemiBold', sans-serif;
+  }
+  
+  .akira {
+    font-family: 'AkiraExpandedDemo', sans-serif;
+  }
+  
+  .hanson {
+    font-family: 'Hanson', sans-serif;
+  }
+  
+  .fondo-negro {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: white;
+    padding: 10px;
+  }
+  
+  .sizedBox {
+    height: 50px;
+  }
+  
+  .product-list {
+    ul {
+      list-style: none;
+      padding: 15px;
+    }
+  
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+  
+      .product-title {
+        flex-grow: 1;
+        margin-right: 20px;
+      }
+  
+      .product-icons {
+        .edit-icon,
+        .delete-icon {
+          cursor: pointer;
+          font-size: 20px;
+          margin: 0 5px;
+          color: #333; // Color de iconos predeterminado
+  
+          &:hover {
+            color: #007bff; // Cambia el color al pasar el cursor
+          }
+        }
+      }
+    }
+  }
+  

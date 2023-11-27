@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row mx-auto" style="font-family: 'PoppinsSemiBold', sans-serif;">
+      <div class="col-md-4 text-left">
+        <h4>FREZZZCO</h4>
+        <p>Tu barbería de confianza</p>
+        <div class="social-icons" style="display: flex; padding: 10px 0;">
+          <a href="#"><i class="fab fa-facebook" style="color: white;"></i></a>
+          <a href="#"><i class="fab fa-twitter" style="color: white;"></i></a>
+          <a href="https://www.instagram.com/frezzzco_cuu/"><i class="fab fa-instagram" style="color: white;"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4 text-left">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-phone fa-rotate-90"></i> +52 614 365 4182</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av Paseos de la Universidad 15118-2, Cafetales, 31125 Chihuahua, Chih.</p>
+        <p><i class="fas fa-envelope"></i> Frezzzco.cuu@gmail.com</p>
+      </div>
+      <div class="col-md-4 text-left">
+        <h4>Nuestra Ubicación</h4>
+        <!-- Aquí se muestra el mapa usando un iframe de Google Maps con borde blanco y esquinas redondeadas -->
+        <div class="mapa">
+          <iframe
+            width="100%"
+            height="150"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps?q=Av+Paseos+de+la+Universidad+15118-2,+Cafetales,+31125+Chihuahua,+Chih.&output=embed"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div style="display: flex; justify-content: center;">
+    <img src="assets/img/logos/LF2.png" alt="Imagen" style="width: 150px; height: 150px;">
+  </div>
+  <div>
+    <a [routerLink]="['/login']">Administrador</a>
+  </div>
+</footer>

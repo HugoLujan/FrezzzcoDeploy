@@ -1,0 +1,214 @@
+.poppins {
+  font-family: 'PoppinsSemiBold', sans-serif;
+}
+
+.akira {
+  font-family: 'AkiraExpandedDemo', sans-serif;
+}
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  
+    .navbar-logo {
+      max-width: 100px;
+      height: auto;
+    }
+  
+    .navbar-link {
+      text-decoration: underline;
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+/* Estilos generales */
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para dispositivos móviles (ancho máximo de 768px) */
+@media (max-width: 768px) {
+
+
+  .sizedBox {
+    height: 10px;
+  }
+
+  .producto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagen {
+    text-align: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info h2 {
+    font-size: 24px;
+  }
+
+  .botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .talla {
+    margin-right: 10px;
+  }
+
+  .cantidad {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .cantidad span {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .payment-info {
+    text-align: center;
+  }
+
+  .payment-info h2 {
+    font-size: 24px;
+  }
+
+  .pay-button {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+
+.sizedBox{
+  height: 10px;
+  width: max-content;
+}
+
+.producto {
+  border: 3px solid #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 50px;
+
+  .borde-redondeado {
+      border-radius: 10px;
+  }
+}
+
+// Estilos de la imagen
+.imagen {
+  flex: 1;
+  margin-right: 20px;
+}
+
+// Estilos de la información
+.info {
+  flex: 2;
+
+  h2 {
+      font-size: 32px;
+      margin: 0;
+      font-weight: bold;
+      color: black;
+      font-family: 'PoppinsSemiBold', sans-serif;
+  }
+
+  p {
+      margin: 0;
+  }
+
+  .cantidad{
+    margin: 10px;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  // Estilos de los botones
+  .botones {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      button {
+          font-size: 18px;
+          padding: 5px 10px;
+          border: none;
+          background-color: #000000;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      // Estilos de la cantidad
+      .cantidad {
+          display: flex;
+          align-items: center;
+      }
+  }
+
+  // Estilos de la descripción
+  .descripcion {
+      margin-top: 10px;
+  }
+}
+/* Estilos para la sección de pago */
+.payment-section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Estilos para las filas */
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 50;
+  margin-right: 50;
+}
+
+/* Estilos para la información del pago */
+.payment-info h2 {
+  font-weight: bold;
+}
+
+.pay-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para los iconos de bancos o servicios */
+.accept-text {
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.payment-icons img {
+  max-width: 40px;
+  margin-right: 10px;
+}
+
+
+  

@@ -1,0 +1,137 @@
+.poppins {
+  font-family: 'PoppinsSemiBold', sans-serif;
+}
+
+.akira {
+  font-family: 'AkiraExpandedDemo', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .producto {
+    width: 48%; /* Para que quepan 2 productos en una fila */
+    padding: 5px; /* Ajusta el relleno deseado para móvil */
+    margin: 5px; /* Ajusta el margen deseado para móvil */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px; /* Ajusta el relleno deseado para PC */
+  margin: 10px; /* Ajusta el margen deseado para PC */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+  width: 100%; 
+
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+ .imagen-con-borde {
+  text-align: center;
+
+}
+
+.imagen-con-borde img {
+  max-width: 130px; /* Ajusta el tamaño deseado en píxeles */
+  /* Establece un tamaño fijo para las imágenes (ajusta el valor según tu preferencia) */
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+  
+  
+  .descripcion {
+    text-align: center;
+    margin-top: 10px;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    h4 {
+      font-size: 16px;
+      color: #ff5722; // Color del precio
+      i.cart-icon {
+        font-size: 20px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  padding: 10px;
+
+  .tab-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    &.active {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+
+  &.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  h3, h4 {
+    margin: 5px 0;
+  }
+
+  h4 {
+    color: red; // Color del precio
+  }
+
+  .cart-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+}

@@ -1,0 +1,259 @@
+<div class="section section-basic">
+    <div class="col-md-10 ml-auto col-xl-6 mr-auto">
+        <div class="mi-div"></div>
+        <div class="card poppins">
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    <ngb-tabset [justify]="'center'" class="text-center" #tabs [activeId]="activeTab">
+
+                        <ngb-tab id="service">
+                            <ng-template ngbTabTitle>
+                                 Servicios
+                            </ng-template>
+                            <ng-template ngbTabContent>
+                                <h2 class="akira">NUESTROS SERVICIOS</h2>
+                                <div class="service-list">
+                                    <div class="dropdown">
+                                        <button *ngFor="let service of services" class="dropbtn"  
+                                            (click)="onServiceClick(service)">
+                                            <i class="busines_badge">
+                                                <span class="barber-avatar">
+                                                    <i class="bi bi-scissors"></i> <!-- Icono de Bootstrap para un perfil de usuario -->
+                                                </span>
+                                                <span style="font-family: 'Hanson', sans-serif;">{{ service.service_name }}</span>
+                                                <br>
+                                                {{service.duration}} minutos ·
+                                                ${{ service.cost }} MXN
+                                                
+                                            </i>
+                                            
+                                        
+                                        </button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-tab>
+
+                        <ngb-tab id="staff">
+                            <ng-template ngbTabTitle>
+                                <i></i> Barberos
+                            </ng-template>
+                            <ng-template ngbTabContent>
+                                <h2 class="akira">Nuestros barberos</h2>
+                                <div class="barber-list">
+                                    <div class="dropdown">
+                                        <button *ngFor="let staff of staffs" class="dropbtn" (click)="onStaffClick(staff)">
+                                            <i class="busines_badge">
+                                                <span class="barber-avatar">
+                                                    <i class="bi bi-person"></i> <!-- Icono de Bootstrap para un perfil de usuario -->
+                                                </span>
+                                                <span class="barber-name" style="font-family: 'Hanson', sans-serif;">{{ staff.first_name }}</span>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </ng-template>
+
+                        </ngb-tab>
+
+                        <ngb-tab id="timeslot">
+                            <ng-template ngbTabTitle>
+                                <i></i> Fecha
+                            </ng-template>
+                            <ng-template ngbTabContent>
+                                <h2 class="akira">Fecha</h2>
+                                <div class="calendar-list"
+                                    style="height: 300px;">
+                                    <div class="datepicker-container">
+                                        <ngb-datepicker #dp [(ngModel)]="model" [startDate]="today"
+                                            [markDisabled]="markDisabled" [minDate]="today" [maxDate]="maxDate"
+                                            (ngModelChange)="onDateSelect($event)"></ngb-datepicker>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-tab>
+
+                        <ngb-tab id="timeslot">
+                            <ng-template ngbTabTitle>
+                                <i></i> Hora
+                            </ng-template>
+                            <ng-template ngbTabContent>
+                                <h2 class="akira">Hora</h2>
+                               <div class="slots-container">
+                                        <div class="button-grid"
+                                            style="display: grid; grid-template-columns: repeat(4, 1fr); justify-content: end;">
+                                            <div *ngFor="let slot of slots" class="btn-container">
+                                                <button class="btn btn-primary" (click)="onSlotClick(slot)">
+                                                    <i class="busines_badge">{{ slot }}</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </ng-template>
+                        </ngb-tab>
+
+
+                        <ngb-tab id="user">
+                            <ng-template ngbTabTitle>
+                                <i></i> Settings
+                            </ng-template>
+                            <ng-template ngbTabContent>
+                                <!-- Aquí va el contenido del tab "user" -->
+                                    <div class="container" style="background-color: black;">
+                                        <div class="" style="background-color: black;">
+                                            
+                                            <div class="card card-login card-plain">
+                                                <img src="assets/img/logos/Logo Recortado - Blanco.png"
+                                            style="max-height: 100px; margin-top: 80px; margin-bottom: 20px;" alt="Logo">
+                                                <form class="form" method="" action="" [formGroup]="loginUser">
+                                                    <!-- Contenido del formulario -->
+                                                    <div class="content">
+                                                        <!-- Input fields... -->
+                                                        <div class="input-group form-group-no-border input-lg " 
+                                                            [ngClass]="{'input-group-focus':focus===true}">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" > <i
+                                                                        class="now-ui-icons users_circle-08" ></i></span>
+                                                            </div>
+                                                            <input type="text" class="form-control " 
+                                                                placeholder="Nombre y Apellido.." (focus)="focus=true"
+                                                                (blur)="focus=false" formControlName="first_name_login">
+                                                            <div class="alert alert-danger" role="alert"
+                                                                style="margin-top: 3px"
+                                                                *ngIf="this.loginUser?.get('first_name_login').errors?.['required'] && this.loginUser.get('first_name_login')?.touched">
+                                                                Su primer nombre es <strong> es obligatorio</strong>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group form-group-no-border input-lg"
+                                                            [ngClass]="{'input-group-focus':focus1===true}">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"><i
+                                                                        class="now-ui-icons text_caps-small"></i></span>
+                                                            </div>
+                                                            <input type="text" placeholder="Celular.."
+                                                                class="form-control" (focus)="focus1=true"
+                                                                (blur)="focus1=false"
+                                                                formControlName="cell_phone_login" />
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+
+
+                                                <!-- Aquí va el contenido del modal... -->
+                                                <ng-template #signIn let-c="close" let-d="dismiss">
+                                                    <div class="modal-header justify-content-center">
+                                                        <button type="button" class="close" (click)="d('Cross click')">
+                                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                        </button>
+                                                        <h4 class="hanson" style="margin-top: 0;">REGÍSTRATE</h4>
+                                                    </div>
+                                                    <!-- <div class="modal-body"> -->
+                                                    <div class="modal-body container d-flex justify-content-center align-items-center"
+                                                        style="height: 100vh; background-color: rgb(255, 255, 255);">
+                                                        <div class="row justify-content-center">
+                                                        
+                                                            <form [formGroup]="newUserForm"
+                                                                (ngSubmit)="createUserSetmore()">
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"> <i
+                                                                                    class="now-ui-icons users_circle-08"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        
+                                                                        <input type="text" class="form-control"
+                                                                        placeholder="Primer nombre..."
+                                                                        formControlName="first_name">
+
+                                                                        <div class="alert alert-danger" role="alert"
+                                                                            style="margin-top: 3px"
+                                                                            *ngIf="this.newUserForm?.get('first_name').errors?.['required'] && this.newUserForm.get('first_name')?.touched">
+                                                                            Su primer nombre es <strong> es
+                                                                                obligatorio</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"> <i
+                                                                                    class="now-ui-icons users_circle-08"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Apellido..."
+                                                                            formControlName="last_name">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"> <i
+                                                                                    class="now-ui-icons tech_mobile"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <input type="tel" class="form-control"
+                                                                            placeholder="Celular..."
+                                                                            formControlName="cell_phone">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text"> <i
+                                                                                    class="now-ui-icons ui-1_email-85"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <input type="email" class="form-control"
+                                                                            placeholder="Correo..."
+                                                                            formControlName="email_id">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- <button type="submit" class="btn btn-primary">Registrarse</button> -->
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!-- </div> -->
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                            (click)="c('Close click')">Close</button>
+                                                        <button type="submit" class="btn btn-primary"
+                                                            (click)="createUserSetmore()">Registrarse</button>
+                                                    </div>
+                                                </ng-template>
+
+                                                <!-- Botones y enlaces -->
+                                                <button class="dropbtn2" style="font-family: 'Hanson', sans-serif;"
+                                                    (click)="getCustomerKey()">
+                                                    INICIAR SESIÓN
+                                                </button>
+                                                <div class="pull-right">
+                                                    <button class="btn btn-primary"
+                                                        (click)="open(signIn, 'signIn', 'lg')">
+                                                        Registrate
+                                                    </button>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <h6>
+                                                        <a href="#" class="link">Need Help?</a>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            </ng-template>
+                        </ngb-tab>
+                    </ngb-tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

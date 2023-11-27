@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="page-header page-header-small fondo-negro">
+      <h1 class="akira">Editar Producto</h1>
+    </div>
+    <div class="sizedBox"></div>
+    <div class="product-list">
+      <ul>
+        <li *ngFor="let producto of productos" class="product-item">
+          <span class="product-title">{{ producto.title }}</span>
+          <span class="product-icons">
+            <a [routerLink]="['/edit-product', producto._id]">✏️</a>
+            <span class="delete-icon" (click)="borrarProducto(producto)">🗑️</span>
+          </span>
+        </li>        
+      </ul>
+    </div>
+    <div class="sizedBox"></div>
+  </div>
+  

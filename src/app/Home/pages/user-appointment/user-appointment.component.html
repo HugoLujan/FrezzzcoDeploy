@@ -1,0 +1,57 @@
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="row justify-content-center">
+        <!-- <div class="col-md-6"> -->
+            <div class="card">
+                <div class="card-header" style="background-color: black; color: white;">
+                    Registro
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="newUserForm" (ngSubmit)="createUserSetmore()">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="now-ui-icons users_circle-08"></i> </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Primer nombre..."
+                                    formControlName="first_name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="now-ui-icons users_circle-08"></i> </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Apellido..."
+                                    formControlName="last_name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="now-ui-icons tech_mobile"></i> </span>
+                                </div>
+                                <input type="tel" class="form-control" placeholder="Celular..."
+                                    formControlName="cell_phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="now-ui-icons ui-1_email-85"></i> </span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Correo..."
+                                    formControlName="email_id">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

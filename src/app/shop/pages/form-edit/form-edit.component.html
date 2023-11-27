@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div class="page-header page-header-small fondo-negro">
+      <h1 class="akira">Editar Producto</h1>
+    </div>
+    <div class="sizedBox"></div>
+    <div class="container">
+      <form [formGroup]="editProductForm" (ngSubmit)="onSubmit()">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" formControlName="title" required>
+  
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" formControlName="description" required></textarea>
+  
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" formControlName="price" required>
+
+        <label for="productImage">Imagen del Producto:</label>
+        <img [src]="productImage" alt="Producto" id="productImage" style="max-width: 50%;"/>
+  
+        <label for="type">Tipo:</label>
+        <select id="type" name="type" formControlName="type" required>
+          <option value="Playera">Playera</option>
+          <option value="Cabello">Cabello</option>
+          <option value="Barba">Barba</option>
+        </select>
+  
+        <label for="status">Disponible:</label>
+        <input type="checkbox" id="status" name="status" formControlName="status" required>
+  
+        <div class="button-container">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+    </div>
+    <div class="sizedBox"></div>
+  </div>
+  
